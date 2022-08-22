@@ -1,0 +1,128 @@
+main {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+
+  background-image: linear-gradient(to top left, #39b385, #9be15d);
+}
+
+.display {
+  background-color: rgba(255, 255, 255, 0.4);
+  color: #fff;
+  font-size: 2rem;
+  text-align: right;
+  border-top-left-radius: 8px;
+  border-top-right-radius: 8px;
+  display: flex;
+  flex-direction: column;
+}
+.calculator {
+  width: 300px;
+  position: fixed;
+  top: 25%;
+}
+
+.buttons {
+  width: 100%;
+  height: 300px;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: repeat(5, 1fr);
+}
+
+.buttons button {
+  border: 1px solid rgba(128, 128, 128, 0.438);
+  cursor: pointer;
+  font-size: 1rem;
+  transition: background-color 0.3s ease-in;
+}
+.buttons button:hover {
+  background-color: rgba(255, 255, 255, 0.144);
+}
+.equal {
+  grid-column: 1/5;
+
+  background-image: linear-gradient(to bottom, #39b384f3, #9ae15d00);
+  color: white;
+  font-weight: bold;
+  font-size: 1.5rem;
+}
+
+.delete {
+  background-image: linear-gradient(to top left, #39b385, #9be15d);
+  color: white;
+  font-weight: bold;
+}
+
+.bar {
+  display: flex;
+  width: 100%;
+  font-size: 0.9rem;
+  justify-content: space-between;
+  align-items: center;
+  gap: 0.3rem;
+  color: rgba(0, 0, 0, 0.63);
+  background-color: rgba(255, 255, 255, 0);
+  padding: 0.2rem;
+}
+
+.bar button {
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
+  padding-left: 0.3rem;
+  font-size: 1rem;
+}
+.bar button:hover {
+  color: rgb(250, 99, 99);
+}
+.bar p {
+  flex-grow: 1;
+  text-align: left;
+  font-size: 1rem;
+  letter-spacing: 0.1rem;
+}
+
+.current {
+  padding: 2rem;
+}
+
+.icon {
+  cursor: pointer;
+}
+.icon p {
+  color: #fff;
+  font-size: 1rem;
+  font-weight: bold;
+  background-color: rgba(255, 255, 255, 0.4);
+  padding: 0.5rem;
+  border-radius: 16px;
+}
+.icon p:hover {
+  background-color: rgba(255, 255, 255, 0.527);
+}
+.expand {
+  height: 800px;
+  width: 500px;
+}
+
+.mode {
+  cursor: pointer;
+
+  margin: 1rem;
+}
+
+.themeChange {
+  background: #0f2027;
+  background: -webkit-linear-gradient(to right, #0f2027, #203a43, #2c5364);
+  background: linear-gradient(to right, #0f2027, #203a43, #2c5364);
+}
+.flex__icons {
+  width: 100%;
+  position: fixed;
+  top: 0;
+  background-color: rgba(128, 128, 128, 0.6);
+  display: flex;
+}

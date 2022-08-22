@@ -1,0 +1,62 @@
+<main [class.themeChange]="theme">
+  <div class="flex__icons">
+    <div class="mode" (click)="theme = !theme">
+      <img
+        src="https://static.thenounproject.com/png/3658224-200.png"
+        alt="theme"
+        width="40px"
+      />
+    </div>
+    <div class="icon" (click)="close = !close">
+      <img
+        src="https://pngimg.com/uploads/calculator/calculator_PNG102230.png"
+        alt="img"
+        width="70px"
+      />
+    </div>
+  </div>
+  <div class="calculator" *ngIf="close" [class.expand]="expand">
+    <div class="display">
+      <div class="bar">
+        <p>Calculator</p>
+        <button (click)="close = !close">-</button>
+        <button (click)="expand = !expand">&#9633;</button>
+        <button (click)="close = !close">&#10005;</button>
+      </div>
+      <p class="current">{{ current }}</p>
+    </div>
+    <div class="buttons">
+      <button class="number" value="7" (click)="getNumber('7')">7</button>
+      <button class="number" value="8" (click)="getNumber('8')">8</button>
+      <button class="number" value="9" (click)="getNumber('9')">9</button>
+      <button class="operator" value="/" (click)="getSymbol('/')">/</button>
+      <button class="number" value="4" (click)="getNumber('4')">4</button>
+      <button class="number" value="5" (click)="getNumber('5')">5</button>
+      <button class="number" value="6" (click)="getNumber('6')">6</button>
+      <button class="operator" value="X" (click)="getSymbol('X')">X</button>
+      <button class="number" value="1" (click)="getNumber('1')">1</button>
+      <button class="number" value="2" (click)="getNumber('2')">2</button>
+      <button class="number" value="3" (click)="getNumber('3')">3</button>
+      <button class="operator" value="+" (click)="getSymbol('+')">+</button>
+      <button class="comma" value="." (click)="getComma()">.</button>
+      <button class="number" value="0" (click)="getNumber('0')">0</button>
+      <button
+        class="delete"
+        value="AC"
+        (click)="allClear()"
+        [class.themeChange]="theme"
+      >
+        AC
+      </button>
+      <button class="operator" value="-" (click)="getSymbol('-')">-</button>
+      <button
+        class="equal"
+        value="="
+        (click)="getSymbol('=')"
+        [class.themeChange]="theme"
+      >
+        =
+      </button>
+    </div>
+  </div>
+</main>
